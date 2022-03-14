@@ -1,0 +1,22 @@
+﻿<form asp-action="Create">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" class="form-control" name="price" placeholder="Enter price">
+    </div>
+    <div class="form-group">
+        <label>Stock</label>
+        <input type="number" class="form-control" name="stock" placeholder="Enter stock">
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" name="isSold">
+        <label class="form-check-label">Is Sold</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index">
+        <button type="button" class="btn btn-secondary">Cancel</button>
+    </a>
+</form>

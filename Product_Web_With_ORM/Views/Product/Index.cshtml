@@ -1,0 +1,36 @@
+﻿@model List<Product>
+
+<h1>All Products</h1>
+
+<a asp-action="Create">
+    <button class="btn btn-primary">Create</button>
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@product.Id">
+                        <button class="btn btn-secondary">Details</button>
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@product.Id">
+                        <button class="btn btn-warning">Edit</button>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@product.Id">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

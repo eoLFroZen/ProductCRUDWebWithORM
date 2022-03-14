@@ -1,0 +1,24 @@
+﻿@model Product
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.Id</th>
+            <td>@Model.Name</td>
+            <td>@Model.Price</td>
+            <td>@Model.Stock</td>
+        </tr>
+    </tbody>
+</table>
+
+<a asp-action="Index">
+    <button class="btn btn-secondary">Back</button>
+</a>
